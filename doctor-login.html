@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Doctor Login</title>
+
+<style>
+body{
+font-family:Arial,sans-serif;
+background:#F8FBFF;
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+}
+
+.login-box{
+background:white;
+padding:40px;
+border-radius:20px;
+box-shadow:0 10px 25px rgba(0,0,0,.1);
+width:350px;
+}
+
+input{
+width:100%;
+padding:12px;
+margin:10px 0;
+border:1px solid #ddd;
+border-radius:10px;
+}
+
+button{
+width:100%;
+padding:12px;
+background:#1677FF;
+color:white;
+border:none;
+border-radius:10px;
+cursor:pointer;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="login-box">
+
+<h2>Doctor Login</h2>
+
+<input type="password"
+id="doctorPassword"
+placeholder="Enter Password">
+
+<button onclick="login()">
+Login
+</button>
+
+</div>
+
+<script>
+
+function login(){
+
+let password =
+document.getElementById("doctorPassword").value;
+
+if(password === "doctor123"){
+
+window.location.href =
+"prescription/index.html";
+
+}else{
+
+alert("Invalid Password");
+
+}
+
+}
+
+</script>
+
+</body>
+</html>

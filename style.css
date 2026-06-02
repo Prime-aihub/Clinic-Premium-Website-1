@@ -1,0 +1,517 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:#F8FBFF;
+color:#1F2937;
+}
+
+/* NAVBAR */
+
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 8%;
+background:white;
+box-shadow:0 4px 20px rgba(0,0,0,0.05);
+position:sticky;
+top:0;
+z-index:1000;
+}
+
+.logo{
+font-size:1.4rem;
+font-weight:700;
+color:#1677FF;
+}
+
+nav ul{
+display:flex;
+list-style:none;
+gap:25px;
+}
+
+nav ul a{
+text-decoration:none;
+color:#1F2937;
+font-weight:500;
+}
+
+/* HERO */
+
+.hero{
+min-height:85vh;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:40px;
+
+background:linear-gradient(
+135deg,
+#F8FBFF,
+#EAF4FF
+);
+}
+
+.hero h1{
+font-size:3rem;
+margin-bottom:15px;
+}
+
+.hero p{
+max-width:700px;
+margin:auto;
+font-size:1.1rem;
+color:#6B7280;
+}
+
+.hero-buttons{
+margin-top:30px;
+}
+
+.btn-primary{
+background:#1677FF;
+color:white;
+padding:14px 30px;
+border-radius:50px;
+text-decoration:none;
+margin-right:10px;
+}
+
+.btn-secondary{
+border:2px solid #1677FF;
+color:#1677FF;
+padding:14px 30px;
+border-radius:50px;
+text-decoration:none;
+}
+
+/* SECTIONS */
+
+.section{
+padding:80px 8%;
+}
+
+.section h2{
+text-align:center;
+margin-bottom:40px;
+font-size:2rem;
+}
+
+/* DOCTOR */
+
+.doctor-card{
+background:white;
+max-width:900px;
+margin:auto;
+display:flex;
+gap:30px;
+align-items:center;
+padding:30px;
+border-radius:20px;
+box-shadow:0 10px 30px rgba(22,119,255,0.08);
+}
+
+.doctor-card img{
+width:300px;
+height:400px;
+object-fit:contain;
+object-position:center;
+border-radius:20px;
+}
+
+/* SERVICES */
+
+.services-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+.service-card{
+background:white;
+padding:30px;
+text-align:center;
+border-radius:20px;
+box-shadow:0 10px 25px rgba(22,119,255,0.08);
+transition:0.3s;
+}
+
+.service-card:hover{
+transform:translateY(-5px);
+}
+
+.service-card i{
+font-size:40px;
+color:#1677FF;
+margin-bottom:15px;
+}
+
+/* TIMINGS */
+
+.timings{
+max-width:600px;
+margin:auto;
+text-align:center;
+background:white;
+padding:30px;
+border-radius:20px;
+box-shadow:0 10px 25px rgba(22,119,255,0.08);
+}
+
+/* CONTACT */
+
+.contact-card{
+max-width:700px;
+margin:auto;
+background:white;
+padding:30px;
+border-radius:20px;
+box-shadow:0 10px 25px rgba(22,119,255,0.08);
+}
+
+.contact-card p{
+margin-bottom:15px;
+font-size:1.1rem;
+}
+
+/* MAP */
+
+.map{
+width:100%;
+height:400px;
+border:none;
+}
+
+/* LOGIN */
+
+.login-section{
+padding:80px 8%;
+text-align:center;
+}
+
+.login-btn{
+display:inline-block;
+margin-top:20px;
+background:#1677FF;
+color:white;
+padding:15px 35px;
+border-radius:50px;
+text-decoration:none;
+}
+
+/* FOOTER */
+
+footer{
+background:#1677FF;
+color:white;
+padding:25px;
+text-align:center;
+}
+
+/* WHATSAPP */
+
+.whatsapp{
+position:fixed;
+bottom:25px;
+right:25px;
+
+width:60px;
+height:60px;
+
+background:#25D366;
+color:white;
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+border-radius:50%;
+font-size:28px;
+
+text-decoration:none;
+
+box-shadow:0 10px 25px rgba(0,0,0,0.2);
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+nav{
+flex-direction:column;
+gap:15px;
+}
+
+.hero h1{
+font-size:2rem;
+}
+
+.doctor-card{
+flex-direction:column;
+text-align:center;
+}
+
+.doctor-card img{
+width:180px;
+height:180px;
+}
+
+}
+
+.modal{
+display:none;
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,.5);
+z-index:9999;
+}
+
+.modal-content{
+background:white;
+max-width:500px;
+width:90%;
+margin:5% auto;
+padding:30px;
+border-radius:20px;
+position:relative;
+}
+
+.close-btn{
+position:absolute;
+right:20px;
+top:10px;
+font-size:30px;
+cursor:pointer;
+}
+
+.modal input,
+.modal select,
+.modal textarea{
+width:100%;
+padding:12px;
+margin:10px 0;
+border:1px solid #ddd;
+border-radius:10px;
+}
+
+.modal button{
+width:100%;
+padding:14px;
+background:#1677FF;
+color:white;
+border:none;
+border-radius:10px;
+cursor:pointer;
+}
+
+/* GOOGLE REVIEWS */
+
+.reviews-section{
+background:#f5f9ff;
+}
+
+.rating-summary{
+text-align:center;
+margin-bottom:40px;
+}
+
+.rating-number{
+font-size:3rem;
+font-weight:700;
+color:#1677FF;
+margin-bottom:10px;
+}
+
+.reviews-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:25px;
+}
+
+.review-card{
+background:white;
+padding:30px;
+border-radius:20px;
+box-shadow:0 10px 25px rgba(22,119,255,0.08);
+transition:0.3s;
+}
+
+.review-card:hover{
+transform:translateY(-5px);
+}
+
+.stars{
+font-size:22px;
+color:#FFD700;
+margin-bottom:15px;
+}
+
+.review-card p{
+line-height:1.7;
+color:#555;
+margin-bottom:15px;
+}
+
+.review-card h4{
+color:#1677FF;
+}
+
+.review-button{
+text-align:center;
+margin-top:40px;
+}
+
+.review-button a{
+background:#1677FF;
+color:white;
+padding:14px 30px;
+border-radius:50px;
+text-decoration:none;
+font-weight:600;
+box-shadow:0 5px 15px rgba(22,119,255,0.25);
+}
+
+/* WHY CHOOSE US */
+
+.why-us{
+background:#ffffff;
+}
+
+.why-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+.why-card{
+background:white;
+padding:30px;
+text-align:center;
+border-radius:20px;
+box-shadow:0 10px 25px rgba(22,119,255,0.08);
+transition:0.3s;
+border-top:4px solid #1677FF;
+}
+
+.why-card:hover{
+transform:translateY(-5px);
+}
+
+.why-card i{
+font-size:45px;
+color:#1677FF;
+margin-bottom:20px;
+}
+
+.why-card h3{
+margin-bottom:15px;
+}
+
+.why-card p{
+color:#666;
+line-height:1.6;
+}
+
+/* FLOATING APPOINTMENT */
+
+.appointment-float{
+
+position:fixed;
+
+bottom:100px;
+right:25px;
+
+width:60px;
+height:60px;
+
+background:#1677FF;
+color:white;
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+border-radius:50%;
+
+font-size:24px;
+
+text-decoration:none;
+
+box-shadow:0 10px 25px rgba(22,119,255,0.3);
+
+z-index:999;
+
+transition:0.3s;
+}
+
+.appointment-float:hover{
+transform:scale(1.1);
+}
+
+/* DOCTOR STATS */
+
+.stats-section{
+
+background:linear-gradient(
+135deg,
+#1677FF,
+#3D8BFF
+);
+
+padding:70px 8%;
+
+display:grid;
+
+grid-template-columns:
+repeat(auto-fit,minmax(200px,1fr));
+
+gap:30px;
+
+text-align:center;
+}
+
+.stat-box{
+
+background:rgba(255,255,255,0.12);
+
+padding:30px;
+
+border-radius:20px;
+
+backdrop-filter:blur(10px);
+
+transition:0.3s;
+}
+
+.stat-box:hover{
+transform:translateY(-5px);
+}
+
+.stat-box h2{
+
+font-size:3rem;
+
+font-weight:700;
+
+color:white;
+
+margin-bottom:10px;
+}
+
+.stat-box p{
+
+color:white;
+
+font-size:1rem;
+}

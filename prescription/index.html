@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Vishnu Health Clinic – Prescription</title>
+
+<!-- CSS -->
+<link rel="stylesheet" href="style.css">
+
+<!-- jsPDF + AutoTable (CDN) -->
+<script src="https://cdn.jsdelivr.net/npm/jspdf@2.5.1/dist/jspdf.umd.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jspdf-autotable@3.8.2/dist/jspdf.plugin.autotable.min.js"></script>
+</head>
+<body>
+  <header>
+    <div class="clinic-title">Vishnu Health Clinic</div>
+    <div class="doc-line">Dr. Satish Pawar (M.B.B.S) – Mumbai</div>
+    <div class="phone">Phone: +91-9004130508</div>
+  </header>
+
+  <div class="wrap">
+    <div class="card">
+      <h2>Patient Details</h2>
+      <div class="grid">
+        <div class="slot" id="slot-name">
+          <h3>1) Patient Name</h3>
+          <div class="value" id="name-value"><span class="subtle">Not added</span></div>
+          <button class="btn small" onclick="addField('name')">ADD</button>
+        </div>
+        <div class="slot" id="slot-age">
+          <h3>2) Age</h3>
+          <div class="value" id="age-value"><span class="subtle">Not added</span></div>
+          <button class="btn small" onclick="addField('age')">ADD</button>
+        </div>
+        <div class="slot" id="slot-concern">
+          <h3>3) Concern</h3>
+          <div class="value" id="concern-value"><span class="subtle">Not added</span></div>
+          <button class="btn small" onclick="addField('concern')">ADD</button>
+        </div>
+      </div>
+      <div class="kicker">
+        <span class="badge">Live</span>
+        <span> Date & Time:&nbsp;<span id="liveDateTime" class="live-time"></span></span>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>Medicine Section</h2>
+      <div class="med-list" id="medList"></div>
+      <div style="margin-top:10px; display:flex; gap:8px;">
+        <button class="btn primary" onclick="addMedicine()">+ ADD MEDICINE</button>
+        <button class="btn ghost" onclick="clearMedicines()">Clear All</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>Send to Patient</h2>
+      <div class="whats">
+        <label for="waNumber"><b>Patient WhatsApp No.</b></label>
+        <input id="waNumber" type="tel" placeholder="+91XXXXXXXXXX" />
+      </div>
+      <p class="muted-note">Format examples: <code>90041XXXXX</code>, <code>+9190041XXXXX</code></p>
+    </div>
+  </div>
+
+  <div class="footer-bar">
+    <button class="btn danger" onclick="resetAll()">Reset</button>
+    <button class="btn ok" onclick="savePdfAndWhatsApp()">Save PDF & Open WhatsApp</button>
+  </div>
+
+<!-- JS -->
+<script src="script.js"></script>
+</body>
+</html>
